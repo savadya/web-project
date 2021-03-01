@@ -1,5 +1,16 @@
 {% extends "template.html" %}
 
-    {% block content %}
+{% block content %}
+        
         <h4>И на Марсе будут яблони цвести!</h4>
-    {% endblock %}
+        {% if list == 'ol' %}
+            {% for i in prof %}
+                <ol>{{ loop.index }} - {{ i }}</ol>
+            {% endfor %}
+
+        {% else %}
+            {% for i in prof %}
+                <li>{{ i }}</li>
+            {% endfor %}
+        {% endif %}
+{% endblock %}
