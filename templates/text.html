@@ -3,14 +3,9 @@
 {% block content %}
         
         <h4>И на Марсе будут яблони цвести!</h4>
-        {% if title == 'ol' %}
-            {% for i in prof %}
-                <ol>{{ loop.index }} - {{ i }}</ol>
+        
+        {% for i in distribution %}
+                <p>{{distribution[i]}} - Каюта № {{i}} {% if loop.first %} капитан корабля {% endif %}</p>
             {% endfor %}
 
-        {% else %}
-            {% for i in prof %}
-                <li>{{ i }}</li>
-            {% endfor %}
-        {% endif %}
 {% endblock %}
