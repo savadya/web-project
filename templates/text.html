@@ -3,7 +3,7 @@
 {% block content %}
         
         <h4>И на Марсе будут яблони цвести!</h4>
-        {% if list == 'ol' %}
+        {% if title == 'ol' %}
             {% for i in prof %}
                 <ol>{{ loop.index }} - {{ i }}</ol>
             {% endfor %}
